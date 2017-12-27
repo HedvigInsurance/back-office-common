@@ -1,5 +1,6 @@
 package com.hedvig.common.events;
 
+import com.hedvig.common.constant.AssetState;
 import lombok.Value;
 import org.axonframework.commandhandling.model.AggregateIdentifier;
 
@@ -12,5 +13,9 @@ public class AssetStateChangeEvent implements Serializable {
 
     @AggregateIdentifier
     private String id;
+
+    private String assetId;
+
+    private AssetState state;
 
 }
